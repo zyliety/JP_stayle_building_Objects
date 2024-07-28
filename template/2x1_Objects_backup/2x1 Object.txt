@@ -1,0 +1,454 @@
+/********************************
+   START factory15
+*********************************/
+
+//spritesets with 4 directions, SNOW-version and the PURCHASE-menu
+spriteset (spriteset_factory15_t1) {
+   template_2x1A_t1(0,0,"gfx/test2x1_8.png")
+}
+
+alternative_sprites (spriteset_factory15_t1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "") {
+    template_2x1A_t1(0,0,"gfx/factory15.png")
+}
+
+spriteset (spriteset_factory15_t2) {
+    template_2x1A_t2(0,0,"gfx/test2x1_8.png")
+}
+
+alternative_sprites (spriteset_factory15_t2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "") {
+    template_2x1A_t2(0,0,"gfx/factory15.png")
+}
+
+spriteset (spriteset_factory15_t1_SNOW) {
+    template_2x1A_t1(0,0,"gfx/test2x1_8.png")
+}
+
+alternative_sprites (spriteset_factory15_t1_SNOW, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "") {
+    template_2x1A_t1(0,0,"gfx/factory15_SNOW.png")
+}
+
+spriteset (spriteset_factory15_t2_SNOW) {
+    template_2x1A_t2(0,0,"gfx/test2x1_8.png")
+}
+
+alternative_sprites (spriteset_factory15_t2_SNOW, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "") {
+    template_2x1A_t2(0,0,"gfx/factory15_SNOW.png")
+}
+
+spriteset (spriteset_factory15_PURCHASE) {
+    template_2x1A_purchase(0,0,"gfx/test2x1_8.png")
+}
+
+
+alternative_sprites (spriteset_factory15_PURCHASE, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "") {
+    template_2x1A_purchase(0,0,"gfx/factory15.png")
+}
+
+
+//View_1
+spritelayout spritelayout_factory15_t1_view1 {
+    ground {
+      // normal ground sprite - always draw
+      sprite: LOAD_TEMP(0) + LOAD_TEMP(1);
+   }
+    
+    building {
+        sprite: spriteset_factory15_t1(0);
+        hide_sprite: nearby_tile_height(0, 0) >= snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+
+
+building {
+        sprite: spriteset_factory15_t1_SNOW(0);
+        hide_sprite: nearby_tile_height(0, 0) < snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+}
+
+spritelayout spritelayout_factory15_t2_view1 {
+    ground {
+      // normal ground sprite - always draw
+      sprite: LOAD_TEMP(0) + LOAD_TEMP(1);
+   }
+    
+    building {
+        sprite: spriteset_factory15_t2(0);
+        hide_sprite: nearby_tile_height(0, 0) >= snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+
+
+building {
+        sprite: spriteset_factory15_t2_SNOW(0);
+        hide_sprite: nearby_tile_height(0, 0) < snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+}
+
+spritelayout spritelayout_factory15_view1_purchase {
+	ground {
+        sprite: GROUNDSPRITE_NORMAL;
+	}
+	building {
+		sprite: spriteset_factory15_PURCHASE(0);
+		xoffset: 0; //from NE edge
+                yoffset: 16; //from NW edge
+                zoffset: 0;
+                xextent: 16;
+                yextent: 16;
+                zextent: 16;
+	}
+}
+
+//View_2
+spritelayout spritelayout_factory15_t1_view2 {
+    ground {
+      // normal ground sprite - always draw
+      sprite: LOAD_TEMP(0) + LOAD_TEMP(1);
+   }
+    
+    building {
+        sprite: spriteset_factory15_t1(1);
+        hide_sprite: nearby_tile_height(0, 0) >= snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+
+
+building {
+        sprite: spriteset_factory15_t1_SNOW(1);
+        hide_sprite: nearby_tile_height(0, 0) < snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+}
+
+spritelayout spritelayout_factory15_t2_view2 {
+    ground {
+      // normal ground sprite - always draw
+      sprite: LOAD_TEMP(0) + LOAD_TEMP(1);
+   }
+    
+    building {
+        sprite: spriteset_factory15_t2(1);
+        hide_sprite: nearby_tile_height(0, 0) >= snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+
+
+building {
+        sprite: spriteset_factory15_t2_SNOW(1);
+        hide_sprite: nearby_tile_height(0, 0) < snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+}
+
+spritelayout spritelayout_factory15_view2_purchase {
+	ground {
+        sprite: GROUNDSPRITE_NORMAL;
+	}
+	building {
+		sprite: spriteset_factory15_PURCHASE(1);
+		xoffset: 0; //from NE edge
+                yoffset: 16; //from NW edge
+                zoffset: 0;
+                xextent: 16;
+                yextent: 16;
+                zextent: 16;
+	}
+}
+
+//View_3
+spritelayout spritelayout_factory15_t1_view3 {
+    ground {
+      // normal ground sprite - always draw
+      sprite: LOAD_TEMP(0) + LOAD_TEMP(1);
+   }
+    
+    building {
+        sprite: spriteset_factory15_t1(2);
+        hide_sprite: nearby_tile_height(0, 0) >= snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+
+
+building {
+        sprite: spriteset_factory15_t1_SNOW(2);
+        hide_sprite: nearby_tile_height(0, 0) < snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+}
+
+spritelayout spritelayout_factory15_t2_view3 {
+    ground {
+      // normal ground sprite - always draw
+      sprite: LOAD_TEMP(0) + LOAD_TEMP(1);
+   }
+    
+    building {
+        sprite: spriteset_factory15_t2(2);
+        hide_sprite: nearby_tile_height(0, 0) >= snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+
+
+building {
+        sprite: spriteset_factory15_t2_SNOW(2);
+        hide_sprite: nearby_tile_height(0, 0) < snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+}
+
+
+spritelayout spritelayout_factory15_view3_purchase {
+	ground {
+        sprite: GROUNDSPRITE_NORMAL;
+	}
+	building {
+		sprite: spriteset_factory15_PURCHASE(2);
+		xoffset: 0; //from NE edge
+                yoffset: 16; //from NW edge
+                zoffset: 0;
+                xextent: 16;
+                yextent: 16;
+                zextent: 16;
+	}
+}
+
+
+//View_4
+spritelayout spritelayout_factory15_t1_view4 {
+    ground {
+      // normal ground sprite - always draw
+      sprite: LOAD_TEMP(0) + LOAD_TEMP(1);
+   }
+    
+    building {
+        sprite: spriteset_factory15_t1(3);
+        hide_sprite: nearby_tile_height(0, 0) >= snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+
+
+building {
+        sprite: spriteset_factory15_t1_SNOW(3);
+        hide_sprite: nearby_tile_height(0, 0) < snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+}
+
+spritelayout spritelayout_factory15_t2_view4 {
+    ground {
+      // normal ground sprite - always draw
+      sprite: LOAD_TEMP(0) + LOAD_TEMP(1);
+   }
+    
+    building {
+        sprite: spriteset_factory15_t2(3);
+        hide_sprite: nearby_tile_height(0, 0) >= snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+
+
+building {
+        sprite: spriteset_factory15_t2_SNOW(3);
+        hide_sprite: nearby_tile_height(0, 0) < snowline_height;
+        xoffset: 0; //from NE edge
+        yoffset: 0; //from NW edge
+        zoffset: 0;
+        xextent: 16;
+        yextent: 16;
+        zextent: 16;
+    }
+
+}
+
+spritelayout spritelayout_factory15_view4_purchase {
+	ground {
+        sprite: GROUNDSPRITE_NORMAL;
+	}
+	building {
+		sprite: spriteset_factory15_PURCHASE(3);
+		xoffset: 0; //from NE edge
+                yoffset: 16; //from NW edge
+                zoffset: 0;
+                xextent: 16;
+                yextent: 16;
+                zextent: 16;
+	}
+}
+
+//select correct sprites for position of the tiles for the four views
+switch (FEAT_OBJECTS, SELF, switch_factory15_position_view1, relative_pos) {
+	relative_coord(0, 0): spritelayout_factory15_t1_view1;
+	relative_coord(1, 0): spritelayout_factory15_t2_view1;
+
+    spritelayout_factory15_t1_view1;
+    }
+
+switch (FEAT_OBJECTS, SELF, switch_factory15_position_view2, relative_pos) {
+	relative_coord(0, 0): spritelayout_factory15_t1_view2;
+	relative_coord(0, 1): spritelayout_factory15_t2_view2;
+
+    spritelayout_factory15_t1_view2;
+    }
+
+switch (FEAT_OBJECTS, SELF, switch_factory15_position_view3, relative_pos) {
+	relative_coord(0, 0): spritelayout_factory15_t1_view3;
+	relative_coord(1, 0): spritelayout_factory15_t2_view3;
+
+    spritelayout_factory15_t1_view3;
+    }
+
+switch (FEAT_OBJECTS, SELF, switch_factory15_position_view4, relative_pos) {
+	relative_coord(0, 0) : spritelayout_factory15_t1_view4;
+	relative_coord(0, 1) : spritelayout_factory15_t2_view4;
+
+    spritelayout_factory15_t1_view4;
+    }
+ 
+//decide spritelayout for each of the 4 directions
+switch (FEAT_OBJECTS, SELF, switch_factory15_view, view) {
+    1:  switch_factory15_position_view2;
+    2:  switch_factory15_position_view3;
+    3:  switch_factory15_position_view4;
+    switch_factory15_position_view1;
+}
+
+
+//calculate ground sprite for object
+switch (FEAT_OBJECTS, SELF, switch_factory15_object, [
+    STORE_TEMP(GROUNDSPRITE_NORMAL, 1),
+    STORE_TEMP( (nearby_tile_terrain_type(0,0) == TILETYPE_DESERT) * GROUNDSPRITE_DESERT, 1),
+    STORE_TEMP( LOAD_TEMP(1) + (LOAD_TEMP(1) == 0) * 4512 * (nearby_tile_terrain_type( 1, 0) == TILETYPE_DESERT), 1),
+    STORE_TEMP( LOAD_TEMP(1) + (LOAD_TEMP(1) == 0) * 4512 * (nearby_tile_terrain_type(-1, 0) == TILETYPE_DESERT), 1),
+    STORE_TEMP( LOAD_TEMP(1) + (LOAD_TEMP(1) == 0) * 4512 * (nearby_tile_terrain_type( 0, 1) == TILETYPE_DESERT), 1),
+    STORE_TEMP( LOAD_TEMP(1) + (LOAD_TEMP(1) == 0) * 4512 * (nearby_tile_terrain_type( 0,-1) == TILETYPE_DESERT), 1),
+    STORE_TEMP( LOAD_TEMP(1) + (LOAD_TEMP(1) == 0) * GROUNDSPRITE_NORMAL, 1),
+    STORE_TEMP(terrain_type == TILETYPE_SNOW   ? GROUNDSPRITE_SNOW : LOAD_TEMP(1), 1),
+    STORE_TEMP(snowline_height == 0xFF ? 0xFF : nearby_tile_height(0,0) - snowline_height, 255),
+    STORE_TEMP((LOAD_TEMP(255) == -1) ? GROUNDSPRITE_SNOW_1_4 : LOAD_TEMP(1), 1),
+    STORE_TEMP((LOAD_TEMP(255) ==  0) ? GROUNDSPRITE_SNOW_2_4 : LOAD_TEMP(1), 1),
+    STORE_TEMP((LOAD_TEMP(255) ==  1) ? GROUNDSPRITE_SNOW_3_4 : LOAD_TEMP(1), 1)
+        ]) {
+    switch_factory15_view;
+}
+
+//calculate ground sprite for purchase menu
+switch (FEAT_OBJECTS, SELF, switch_factory15_purchase, view) {
+    1:  spritelayout_factory15_view2_purchase;
+    2:  spritelayout_factory15_view3_purchase;
+    3:  spritelayout_factory15_view4_purchase;
+    spritelayout_factory15_view1_purchase;
+}
+
+item (FEAT_OBJECTS, factory15, 249) {
+    property {
+        class: "AZFY";
+        classname: string(STR_AZFY);
+        name: string(STR_factory15);
+        climates_available: ALL_CLIMATES;
+        size: [2,1];
+        build_cost_multiplier: 0;
+        remove_cost_multiplier: 0;
+        introduction_date: date(1750,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE, OBJ_FLAG_REMOVE_IS_INCOME);
+        height: 0;
+        num_views: 4;
+     }
+    graphics {
+        default: switch_factory15_object;
+        purchase: switch_factory15_purchase;
+
+      }
+}

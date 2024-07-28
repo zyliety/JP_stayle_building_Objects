@@ -1,0 +1,18 @@
+##grflangid 0x01
+
+#Main grf title and description
+STR_GRF_NAME        :2x1 objects template
+STR_GRF_DESCRIPTION :{SILVER}Description of the GRF content and license, credits
+
+#error messages
+STR_OPENTTD_VERSION :1.2.0 (r22723)
+
+#object classes
+
+STR_XX21           :2x1 object
+
+
+
+#object name and description
+STR_test2x1            :2x1 object
+STR_test2x1_PURCHASE   :Extra Info
