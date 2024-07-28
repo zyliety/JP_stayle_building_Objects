@@ -1,0 +1,21 @@
+##grflangid 0x01
+
+#Main grf title and description
+STR_GRF_NAME        :JP Stayle building objects pre-release
+STR_GRF_DESCRIPTION :{YELLOW}JP Stayle building objects pre-release,2024/7/16. {}{WHITE}Draw by: Zyliety. {}Code by:Zyliety.{}License:GPLv2 or higher
+
+#error messages
+STR_OPENTTD_VERSION :1.2.0 (r22723)
+
+#object classes
+STR_JPBO		:{YELLOW}JP Stayle building objects
+
+STR_ObjectMenu		:    Object Menu
+
+STR_PRER            :    Pre-realease
+
+
+#object name and description
+STR_JPB1            :JP-Stayle Warehouse
+STR_JPB2            :Houbunsha
+
